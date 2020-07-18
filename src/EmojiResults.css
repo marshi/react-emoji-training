@@ -1,0 +1,21 @@
+.emoji-result-row {
+  border-bottom: 1px solid #ccc;
+  height: 32px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.emoji-result-row:hover {
+  background-color: #eee;
+}
+
+.emoji-result-row img {
+  height: 32px;
+  vertical-align: middle;
+}
+
+.emoji-result-row .title {
+  height: 100%;
+  vertical-align: middle;
+  margin-left: 10px;
+}

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./EmojiResults.css"
+
 type Props = {
   title: string,
   symbol: string
@@ -8,12 +10,12 @@ type Props = {
 export default function EmojiResultRow(props: Props) {
 
   const codePointHex = props.symbol.codePointAt(0)?.toString(16)
-  const src = `http://cdn.jsdelivr.net/emojione/assets/png/${codePointHex}.png`
+  const src = `https://cdn.jsdelivr.net/emojione/assets/png/${codePointHex}.png`
 
   return (
-    <div>
+    <div className="emoji-result-row">
       <img src={src}/>
-      <span>{props.title}</span>
+      <span className="title">{props.title}</span>
     </div>
   )
 }
