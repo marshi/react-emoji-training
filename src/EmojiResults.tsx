@@ -10,9 +10,7 @@ export default function EmojiResults(props: Props) {
 
   return (
     <div>
-      {emojiList.map(emojiData =>
-        props.emojiData.map(emoji => <EmojiResultRow title={emojiData.title} symbol={emojiData.symbol}/>)
-      )}
+      {emojiList.map(emojiData => <EmojiResultRow title={emojiData.title} symbol={emojiData.symbol}/>)}
     </div>
   )
 }
