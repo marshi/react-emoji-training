@@ -4,7 +4,8 @@ import "./EmojiResults.css"
 
 type Props = {
   title: string,
-  symbol: string
+  symbol: string,
+  keywords: string
 }
 
 export default function EmojiResultRow(props: Props) {

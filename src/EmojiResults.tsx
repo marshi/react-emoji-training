@@ -2,15 +2,28 @@ import React from "react";
 import EmojiResultRow from "./EmojiResultRow";
 import emojiList from "./emojiList.json"
 
+export type EmojiData = {
+  title: string,
+  symbol: string,
+  keywords: string
+}
+
 type Props = {
-  emojiData: Array<string>
+  emojis: Array<EmojiData>
 }
 
 export default function EmojiResults(props: Props) {
 
   return (
     <div>
-      {emojiList.map(emojiData => <EmojiResultRow title={emojiData.title} symbol={emojiData.symbol}/>)}
+      {props.emojis.map(emojiData =>
+        <EmojiResultRow
+          key={emojiData.title}
+          title={emojiData.title}
+          symbol={emojiData.symbol}
+          keywords={emojiData.keywords}
+        />
+      )}
     </div>
   )
 }
